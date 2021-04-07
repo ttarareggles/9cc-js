@@ -1,0 +1,28 @@
+{
+  "name": "9cc",
+  "version": "1.0.0",
+  "description": "A Node.js Web Service created for the Nine Coding Challenge.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttarareggles/9cc-js.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express"
+  ],
+  "author": "Tara Regan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttarareggles/9cc-js/issues"
+  },
+  "homepage": "https://github.com/ttarareggles/9cc-js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
