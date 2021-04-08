@@ -18,6 +18,11 @@
 
 ### ✨ [Demo](https://nine-coding-challenge-t-regan.herokuapp.com/)
 
+## Dependancies
+
+npm: 6.14.12
+node: 14.16.1
+
 ## Install
 
 ```sh
@@ -40,8 +45,8 @@ npm test
 
 👤 **Tara Regan**
 
-* Github: [@ttarareggles](https://github.com/ttarareggles)
-* LinkedIn: [@tara-regan](https://linkedin.com/in/tara-regan)
+- Github: [@ttarareggles](https://github.com/ttarareggles)
+- LinkedIn: [@tara-regan](https://linkedin.com/in/tara-regan)
 
 ## Show your support
 
@@ -52,5 +57,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2021 [Tara Regan](https://github.com/ttarareggles).<br />
 This project is [ISC](https://github.com/ttarareggles/9cc-js/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
