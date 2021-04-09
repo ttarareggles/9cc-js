@@ -8,15 +8,15 @@ const sampleRequestInvalid = require('./test_data/sample-request-invalid.json')
 const sampleResponseSuccess = require('./test_data/sample-response-success.json')
 const sampleResponseMissingFields = require('./test_data/sample-response-missing-fields.json')
 
-describe('Test app is running', () => {
-  test('Positive ping test', () => {
-    return request(app)
-      .get('/')
-      .then(res => {
-        expect(res.statusCode).toBe(200)
-      });
-  });
-});
+// describe('Test app is running', () => {
+//   test('Positive ping test', () => {
+//     return request(app)
+//       .get('/')
+//       .then(res => {
+//         expect(res.statusCode).toBe(200)
+//       });
+//   });
+// });
 
 describe('Test filtering and formatting shows', () => {
   test('Positive filtering test ', () => {

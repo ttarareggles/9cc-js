@@ -3,10 +3,6 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.status(200).send("Hello World!");
-});
-
 app.post('/', function (req, res) {
     try{
         if (req.body && req.body.payload) {
