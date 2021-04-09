@@ -8,25 +8,26 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', function (req, res) {
-    if (req.body && req.body.payload) {
-        let filteredShows = []
-        req.body.payload.forEach( (show) => {
-            if (
-                show.drm && 
-                typeof(show.drm) === 'boolean' &&
-                show.drm == true && 
-                show.episodeCount && 
-                typeof(show.episodeCount) === 'number' &&
-                show.episodeCount > 0
-            ) {
-                filteredShows.push(createShowRes(show))
-            }
-        })
-        res.json({ response: filteredShows });
-    }
-    else {
-        res.status(400).send({ error: 'Could not decode request: JSON parsing failed' })
-    }
+    try{
+        if (req.body && req.body.payload) {
+            let filteredShows = []
+            req.body.payload.forEach( (show) => {
+                if (
+                    show.drm && 
+                    typeof(show.drm) === 'boolean' &&
+                    show.drm == true && 
+                    show.episodeCount && 
+                    typeof(show.episodeCount) === 'number' &&
+                    show.episodeCount > 0
+                ) {
+                    filteredShows.push(createShowRes(show))
+                }
+            })
+            res.json({ response: filteredShows });
+        }
+        else { throw "Invalid JSON"}
+    } catch (e) {
+        res.status(400).send({ error: 'Could not decode request: JSON parsing failed' })}
 });
 
 const createShowRes = (showReq) => {
