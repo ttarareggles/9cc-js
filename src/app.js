@@ -3,6 +3,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.status(200);
+});
+
 app.post('/', function (req, res) {
     try{
         if (req.body && req.body.payload) {
@@ -23,7 +27,7 @@ app.post('/', function (req, res) {
         }
         else { throw "Invalid JSON"}
     } catch (e) {
-        res.status(400).send({ error: 'Could not decode request: JSON parsing failed' })}
+        res.status(400).json({ error: 'Could not decode request: JSON parsing failed' })}
 });
 
 const createShowRes = (showReq) => {
