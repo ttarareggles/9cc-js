@@ -31,6 +31,10 @@ app.post('/', function (req, res) {
         res.status(400).json({ error: 'Could not decode request: JSON parsing failed' })}
 });
 
+app.all('*', function (req, res) {
+    res.status(400).json({ error: 'Could not decode request: JSON parsing failed' })
+});
+
 const createShowRes = (showReq) => {
     const image = (showReq.image && showReq.image.showImage) ? showReq.image.showImage : ""
     const slug = showReq.slug ? showReq.slug : ""
