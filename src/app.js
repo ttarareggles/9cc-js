@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 
 app.post('/', function (req, res) {
     try{
+        JSON.parse(req);
         if (req.body && req.body.payload) {
             let filteredShows = []
             req.body.payload.forEach( (show) => {
